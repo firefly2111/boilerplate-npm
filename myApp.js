@@ -1,4 +1,5 @@
 
+
 var express = require('express');
 var app = express();
 
@@ -75,7 +76,10 @@ app.get('/name', (req, res) => {
 
 
 /** 12) Get data form POST  */
-
+app.post("/name", (req, res) => {
+  let something = {name: `${req.body.first} ${req.body.last}` };
+  res.json(something);
+});
 
 
 // This would be part of the basic setup of an Express app
