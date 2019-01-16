@@ -67,8 +67,7 @@ app.get("/:word/echo", function(req, res){
 /** 10) Get input from client - Query parameters */
 // /name?first=<firstname>&last=<lastname>
 app.get('/name', (req, res) => {
-  let jsonObj = {name: `${req.query.first} ${req.query.last}` };
-  res.send(jsonObj);
+  res.json({"name":`${req.query.first} ${req.query.last}`});
 });
   
 /** 11) Get ready for POST Requests - the `body-parser` */
