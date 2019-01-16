@@ -12,7 +12,6 @@ app.use(function (req, res, next){
 
 // --> 11)  Mount the body-parser middleware  here
 var bodyParser = require("body-parser");
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 
